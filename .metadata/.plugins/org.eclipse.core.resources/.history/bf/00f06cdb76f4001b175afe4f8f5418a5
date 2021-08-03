@@ -1,0 +1,73 @@
+package page_objects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage {
+	
+	public WebDriver driver;
+	
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	By email = By.xpath("//input[@type='email']");
+	By password = By.xpath("//input[@type='password']");
+	By signInBtn = By.xpath("//button[contains(text(),'SIGN IN')]");
+	By emailAlert = By.xpath("//span[contains(text(),'Email is invalid or empty')]");
+	By passwordAlert = By.xpath("//span[contains(text(),'Password must have at least 8 characters')]");
+	By alert = By.xpath("//span[contains(text(),'You entered an incorrect email, password, or both.')]");
+	By adminLoginBtn = By.xpath("//span[@class=\"forgot-password\" and contains(text(),'Omni team members login here')]");
+	By adminEmail = By.xpath("//input[@name='loginfmt']");
+	By adminPassword = By.xpath("//input[@name='passwd']");
+	
+	public WebElement getEmail() {
+		return driver.findElement(email);
+	}
+	
+	public WebElement getPassword() {
+		return driver.findElement(password);
+	}
+	
+	public WebElement getSignIn() {
+		return driver.findElement(signInBtn);
+	}
+	
+	public WebElement getEmailAlert() {
+		return driver.findElement(emailAlert);
+	}
+	
+	public WebElement getPasswordAlert() {
+		return driver.findElement(passwordAlert);
+	}
+	
+	public WebElement getAlert() {
+		return driver.findElement(alert);
+	}
+	
+	public WebElement getAdminLoginBtn() {
+		return driver.findElement(adminLoginBtn);
+	}
+	
+	public WebElement getAdminEmail() {
+		return driver.findElement(adminEmail);
+	}
+	
+	public WebElement getAdminPassword() {
+		return driver.findElement(adminPassword);
+	}
+	
+	public void loginAttorneyMethod() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		driver.findElement(email).click();
+		driver.findElement(email).sendKeys(prop.getProperty("attorneyEmail"));
+		driver.findElement(password).click();
+		driver.findElement(password).sendKeys(prop.getProperty("attorneyPassword"));
+		driver.findElement(signInBtn).click();
+	}
+
+}
