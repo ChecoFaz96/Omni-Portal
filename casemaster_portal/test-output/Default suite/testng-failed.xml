@@ -5,8 +5,9 @@
     <classes>
       <class name="tests.Login">
         <methods>
-          <include name="TC01_login_Attorney_Validation"/>
+          <include name="TC06_logout_Validation"/>
           <include name="initialize"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- tests.Login -->
     </classes>

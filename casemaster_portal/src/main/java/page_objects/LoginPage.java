@@ -1,6 +1,7 @@
 package page_objects;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -74,6 +75,22 @@ public class LoginPage {
 		lpage.getEmail().sendKeys(prop.getProperty("attorneyEmail"));
 		lpage.getPassword().click();
 		lpage.getPassword().sendKeys(prop.getProperty("attorneyPassword"));
+		lpage.getSignIn().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Home')]")));
+	}
+	
+	public void loginAttorneyMethodNewPassword() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		LoginPage lpage = new LoginPage(driver);
+		lpage.getEmail().click();
+		lpage.getEmail().sendKeys(prop.getProperty("attorneyEmail"));
+		lpage.getPassword().click();
+		lpage.getPassword().sendKeys("iTexico1+");
 		lpage.getSignIn().click();
 		
 		WebDriverWait wait = new WebDriverWait(driver,20);

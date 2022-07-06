@@ -3,6 +3,7 @@
 <suite name="Regression Test Suite">
 <listeners>
 	<listener class-name="resources.ExtentReporterNG"/>
+	<listener class-name="resources.Listeners"/>
 </listeners>
   <test name="Login">
     <classes>
