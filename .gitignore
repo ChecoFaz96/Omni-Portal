@@ -1,1 +1,8 @@
-/.metadata/
+.idea
+.metadata
+.recommenders
+.settings
+reports
+target
+test-output
+drivers
