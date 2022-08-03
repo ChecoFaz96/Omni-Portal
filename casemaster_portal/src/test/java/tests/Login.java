@@ -39,6 +39,13 @@ public class Login extends Base{
 	}
 	
 	@Test(priority=2)
+	public void TC02_validation_Wrong_Email() throws IOException {
+		lpage = new LoginPage(driver);
+		lpage.loginIncorrectEmail();
+		Assert.assertTrue(driver.findElements(By.xpath("//span[contains(text(),'You entered an incorrect email, password, or both.')]")).size()>0);
+	}
+	
+	@Test(priority=3)
 	public void TC06_logout_Validation() throws InterruptedException, IOException {
 		
 		lpage = new LoginPage(driver);

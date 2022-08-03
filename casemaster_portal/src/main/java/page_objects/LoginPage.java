@@ -81,6 +81,22 @@ public class LoginPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Home')]")));
 	}
 	
+	public void loginIncorrectEmail() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		LoginPage lpage = new LoginPage(driver);
+		lpage.getEmail().click();
+		lpage.getEmail().sendKeys(prop.getProperty("incorrectAttorneyEmail"));
+		lpage.getPassword().click();
+		lpage.getPassword().sendKeys(prop.getProperty("attorneyPassword"));
+		lpage.getSignIn().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='ap-icon ap-wrong-icon']")));
+	}
+	
 	public void loginAttorneyMethodNewPassword() throws IOException {
 		Properties prop;
 		prop = new Properties();
