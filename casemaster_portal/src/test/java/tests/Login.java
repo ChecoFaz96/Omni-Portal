@@ -39,13 +39,35 @@ public class Login extends Base{
 	}
 	
 	@Test(priority=2)
-	public void TC02_validation_Wrong_Email() throws IOException {
+	public void TC02_validation_Empty_Email() throws IOException {
+		lpage = new LoginPage(driver);
+		lpage.loginEmptyEmail();
+		Assert.assertTrue(driver.findElements(By.xpath("//span[contains(text(),'Email is invalid or empty.')]")).size()>0);
+	}
+	
+	@Test(priority=3)
+	public void TC03_validation_Empty_Password() throws IOException {
+		lpage = new LoginPage(driver);
+		lpage.loginEmptyPassword();
+		Assert.assertTrue(driver.findElements(By.xpath("//span[contains(text(),'Password must have at least 8 characters.')]")).size()>0);
+	}
+
+	@Test(priority=4)
+	public void TC03_validation_Wrong_Email() throws IOException {
 		lpage = new LoginPage(driver);
 		lpage.loginIncorrectEmail();
 		Assert.assertTrue(driver.findElements(By.xpath("//span[contains(text(),'You entered an incorrect email, password, or both.')]")).size()>0);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=5)
+	public void TC03_validation_Wrong_Password() throws IOException {
+		lpage = new LoginPage(driver);
+		lpage.loginIncorrectEmail();
+		Assert.assertTrue(driver.findElements(By.xpath("//span[contains(text(),'You entered an incorrect email, password, or both.')]")).size()>0);
+	}
+	
+	
+	@Test(priority=6)
 	public void TC06_logout_Validation() throws InterruptedException, IOException {
 		
 		lpage = new LoginPage(driver);

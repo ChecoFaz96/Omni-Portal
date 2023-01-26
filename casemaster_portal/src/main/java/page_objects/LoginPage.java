@@ -81,6 +81,36 @@ public class LoginPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Home')]")));
 	}
 	
+	public void loginEmptyEmail() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		LoginPage lpage = new LoginPage(driver);
+		lpage.getEmail().click();
+		lpage.getPassword().click();
+		lpage.getPassword().sendKeys(prop.getProperty("attorneyPassword"));
+		lpage.getSignIn().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='ap-icon ap-wrong-icon']")));
+	}
+	
+	public void loginEmptyPassword() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		LoginPage lpage = new LoginPage(driver);
+		lpage.getEmail().click();
+		lpage.getEmail().sendKeys(prop.getProperty("attorneyEmail"));
+		lpage.getPassword().click();
+		lpage.getSignIn().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='ap-icon ap-wrong-icon']")));
+	}
+	
 	public void loginIncorrectEmail() throws IOException {
 		Properties prop;
 		prop = new Properties();
@@ -96,6 +126,23 @@ public class LoginPage {
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='ap-icon ap-wrong-icon']")));
 	}
+	
+	public void loginIncorrectPassword() throws IOException {
+		Properties prop;
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);
+		LoginPage lpage = new LoginPage(driver);
+		lpage.getEmail().click();
+		lpage.getEmail().sendKeys(prop.getProperty("attorneyEmail"));
+		lpage.getPassword().click();
+		lpage.getPassword().sendKeys(prop.getProperty("incorrectAttorneyPassword"));
+		lpage.getSignIn().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='ap-icon ap-wrong-icon']")));
+	}
+	
 	
 	public void loginAttorneyMethodNewPassword() throws IOException {
 		Properties prop;

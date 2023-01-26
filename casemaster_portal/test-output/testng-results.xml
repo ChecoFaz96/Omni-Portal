@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Regression Test Suite" duration-ms="17830" started-at="2022-08-03T19:51:58Z" finished-at="2022-08-03T19:52:16Z">
+  <suite name="Regression Test Suite" duration-ms="45316" started-at="2023-01-16T16:20:01Z" finished-at="2023-01-16T16:20:46Z">
     <groups>
     </groups>
-    <test name="Login" duration-ms="17830" started-at="2022-08-03T19:51:58Z" finished-at="2022-08-03T19:52:16Z">
+    <test name="Login" duration-ms="45316" started-at="2023-01-16T16:20:01Z" finished-at="2023-01-16T16:20:46Z">
       <class name="tests.Login">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="3170" started-at="2022-08-03T19:51:58Z" finished-at="2022-08-03T19:52:01Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="4147" started-at="2023-01-16T16:20:01Z" finished-at="2023-01-16T16:20:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TC01_login_Attorney_Validation()[pri:1, instance:tests.Login@316bcf94]" name="TC01_login_Attorney_Validation" duration-ms="1280" started-at="2022-08-03T19:52:01Z" finished-at="2022-08-03T19:52:03Z">
+        <test-method status="PASS" signature="TC01_login_Attorney_Validation()[pri:1, instance:tests.Login@316bcf94]" name="TC01_login_Attorney_Validation" duration-ms="2083" started-at="2023-01-16T16:20:05Z" finished-at="2023-01-16T16:20:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_login_Attorney_Validation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="35" started-at="2022-08-03T19:52:03Z" finished-at="2022-08-03T19:52:03Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="143" started-at="2023-01-16T16:20:08Z" finished-at="2023-01-16T16:20:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="2346" started-at="2022-08-03T19:52:03Z" finished-at="2022-08-03T19:52:06Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="2422" started-at="2023-01-16T16:20:08Z" finished-at="2023-01-16T16:20:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TC02_validation_Wrong_Email()[pri:2, instance:tests.Login@316bcf94]" name="TC02_validation_Wrong_Email" duration-ms="578" started-at="2022-08-03T19:52:06Z" finished-at="2022-08-03T19:52:06Z">
+        <test-method status="PASS" signature="TC02_validation_Empty_Email()[pri:2, instance:tests.Login@316bcf94]" name="TC02_validation_Empty_Email" duration-ms="438" started-at="2023-01-16T16:20:10Z" finished-at="2023-01-16T16:20:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC02_validation_Wrong_Email -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="39" started-at="2022-08-03T19:52:07Z" finished-at="2022-08-03T19:52:07Z">
+        </test-method> <!-- TC02_validation_Empty_Email -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="16214" started-at="2023-01-16T16:20:11Z" finished-at="2023-01-16T16:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="2477" started-at="2022-08-03T19:52:07Z" finished-at="2022-08-03T19:52:09Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.Login@316bcf94]" name="initialize" is-config="true" duration-ms="2462" started-at="2023-01-16T16:20:27Z" finished-at="2023-01-16T16:20:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TC06_logout_Validation()[pri:3, instance:tests.Login@316bcf94]" name="TC06_logout_Validation" duration-ms="6409" started-at="2022-08-03T19:52:09Z" finished-at="2022-08-03T19:52:16Z">
+        <test-method status="PASS" signature="TC03_validation_Empty_Password()[pri:3, instance:tests.Login@316bcf94]" name="TC03_validation_Empty_Password" duration-ms="194" started-at="2023-01-16T16:20:30Z" finished-at="2023-01-16T16:20:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_logout_Validation -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="36" started-at="2022-08-03T19:52:16Z" finished-at="2022-08-03T19:52:16Z">
+        </test-method> <!-- TC03_validation_Empty_Password -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.Login@316bcf94]" name="teardown" is-config="true" duration-ms="16220" started-at="2023-01-16T16:20:30Z" finished-at="2023-01-16T16:20:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
