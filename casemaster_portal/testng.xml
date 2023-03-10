@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Test Suite">
 <listeners>
-	<listener class-name="resources.ExtentReporterNG"/>
-	<listener class-name="resources.Listeners"/>
+	<listener class-name="commons.ExtentReporterNG"/>
+	<listener class-name="commons.Listeners"/>
 </listeners>
   <test name="Login">
     <classes>

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import page_objects.HeaderPage;
 import page_objects.LoginPage;
-import resources.Base;
+import commons.Base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

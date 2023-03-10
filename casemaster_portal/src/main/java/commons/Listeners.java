@@ -1,8 +1,9 @@
-package resources;
+package commons;
 
 
 import java.io.IOException;
 
+import commons.ExtentReporterNG;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -12,7 +13,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import resources.Base;
+import commons.Base;
 
 public class Listeners implements ITestListener{
 	
