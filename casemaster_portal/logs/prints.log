@@ -1,1 +1,4 @@
-10:53:10.619 [main] INFO  tests.Login - Successfully logout
+09:18:59.635 [AsyncHttpClient-2-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+09:18:59.636 [AsyncHttpClient-2-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+09:18:59.636 [AsyncHttpClient-2-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+09:18:59.636 [AsyncHttpClient-2-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.delayedQueue.ratio: 8
